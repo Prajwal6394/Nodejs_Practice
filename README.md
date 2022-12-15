@@ -7,3 +7,10 @@ Core modules of node js
 3. fs
 4. path
 5. os
+
+
+# Nodejs life cycle
+1. Nodejs is a single threaded application
+2. Nodejs is event driven
+3. Nodejs is non-blocking I/O model
+
