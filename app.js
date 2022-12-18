@@ -10,11 +10,22 @@ const server = http.createServer((req, res) => {
     if (url === '/') {
         res.write('<html>');
         res.write('<head> <title>Message from server</title></head>')
-        res.write('<body> <form action="/message" method=""POST> <input type=text><button type="submit">Send</button> </form> </body>')
+        res.write('<body> <form action="/message" method="POST"> <input name = "message" type=text><button type="submit">Send</button> </form> </body>')
         return res.end();
     }
     if(url === '/message' && method === "POST"){
-        fs.writeFileSync('message.txt', 'DummyText');
+        const body = [];
+        req.on('data', (chucks) => {
+            console.log(chucks);
+            body.push(chucks);
+        });
+        req.on('end', () => {
+            const parseBody = Buffer.concat(body).toString();
+            console.log(parseBody);
+            const messageToBeloadedInTxtFile = parseBody.split('=')[1];
+            fs.writeFileSync('message.txt', messageToBeloadedInTxtFile);
+        });
+        
         res.statusCode = 302;
         res.setHeader('Location', '/');
         return res.end();
