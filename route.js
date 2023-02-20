@@ -17,7 +17,7 @@ const requestHandler = (req, res) => {
         req.on('end', () => {
             const parseBody = Buffer.concat(body).toString();
             console.log(parseBody);
-            const messageToBeloadedInTxtFile = parseBody.split('=')[1];
+            const messageToBeloadedInTxtFile = parseBody.split('=')[0];
             fs.writeFile('message.txt', messageToBeloadedInTxtFile, err => {
                 res.statusCode = 302;
                 res.setHeader('Location', '/');
