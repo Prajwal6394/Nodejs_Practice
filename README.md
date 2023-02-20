@@ -35,4 +35,9 @@ Core modules of node js
 1. Syntax error
 2. Runtime error
 3. Logical error
-4.
+
+# Express js 
+
+1. Express js is web applocation frame work for nodejs.
+2. Used to handle bunch of request and makes our work easy.
+3. Most important part of using express js is its understanding of its middleware.
