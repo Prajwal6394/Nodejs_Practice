@@ -1,0 +1,21 @@
+{
+  "name": "nodejs_practice",
+  "version": "1.0.0",
+  "description": "Learning Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prajwal6394/Nodejs_Practice.git"
+  },
+  "author": "Prajwal Pandey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prajwal6394/Nodejs_Practice/issues"
+  },
+  "homepage": "https://github.com/Prajwal6394/Nodejs_Practice#readme"
+}
