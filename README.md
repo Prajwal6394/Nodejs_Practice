@@ -29,3 +29,10 @@ Core modules of node js
 3. Callbacks are the functions which are executed asynchronously.
 4. Callbacks are the functions which are executed in the background.
 5. Callbacks are the functions which are executed after the main function has finished executing.
+
+
+# types of errors while writing nodejs code
+1. Syntax error
+2. Runtime error
+3. Logical error
+4.
