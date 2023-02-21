@@ -9,7 +9,7 @@ const adminRotes = require('./routes/admin');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(adminRotes);
+app.use('/admin',adminRotes);
 app.use(shop);
 
 app.use((req, res, next)=>{
